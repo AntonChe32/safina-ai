@@ -27,6 +27,20 @@ Node.js native host, DOM observation, and site-specific adapters.
 
 ---
 
+## AI assistant instructions
+
+To teach an AI assistant how to use ALCB correctly, see:
+
+**[AI-INSTRUCTIONS.md](AI-INSTRUCTIONS.md)**
+
+It explains the execution cycle, Bash/Python/DOM commands, unique IDs,
+result handling, safety rules, and recommended development workflow.
+
+The examples in that document are intentionally made non-executable so that
+documentation shown inside an ALCB-enabled chat cannot accidentally run.
+
+---
+
 ## Why ALCB?
 
 A normal AI chat can generate a command such as:
