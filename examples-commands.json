@@ -1,0 +1,14 @@
+[
+  {
+    "title": "CLCC",
+    "command": "python3 /tmp/at.py /dev/ttyUSB3 AT+CLCC"
+  },
+  {
+    "title": "Dial",
+    "command": "python3 /tmp/at.py /dev/ttyUSB3 'ATD+79091341469;'"
+  },
+  {
+    "title": "ADB audio ps",
+    "command": "adb shell 'ps | grep -E \"alsa_daemon|sim_arec|atfwd\" | grep -v grep || true'"
+  }
+]

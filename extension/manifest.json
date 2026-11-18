@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Anton Local Command Bridge (ALCB)",
+  "version": "3.1.5",
+  "description": "Local command bridge for ChatGPT, Google AI Mode, DeepSeek, GigaChat and Grok.",
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://www.google.com/*",
+    "https://google.com/*",
+    "https://giga.chat/*",
+    "https://chat.deepseek.com/*",
+    "https://x.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://www.google.com/*",
+        "https://google.com/*",
+        "https://giga.chat/*",
+        "https://chat.deepseek.com/*",
+        "https://x.com/*"
+      ],
+      "js": [
+        "site-adapter.js",
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Anton Local Command Bridge"
+  }
+}

@@ -1,0 +1,161 @@
+#alcb-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 92px;
+  z-index: 2147483647;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: rgba(20, 20, 24, 0.94);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  max-width: 420px;
+  display: none;
+}
+
+#alcb-panel.alcb-visible { display: block; }
+
+#alcb-command {
+  font: 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+  color: #d7f7d7;
+}
+
+#alcb-actions { display: flex; gap: 8px; }
+
+#alcb-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#alcb-run { background: #22c55e; color: #07140b; font-weight: 700; }
+#alcb-hide { background: #333842; color: #fff; }
+
+#alcb-status {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+#alcb-version { margin-top: 6px; font-size: 10px; opacity: 0.65; }
+
+
+.alcb-inline-wrapper {
+  position: relative !important;
+}
+
+.alcb-inline-run {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 9px;
+  cursor: pointer;
+  font: 12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  background: #22c55e;
+  color: #07140b;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.24);
+}
+
+.alcb-inline-run:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* v1.2 command sidebar and code runners */
+#alcb-panel {
+  top: 72px;
+  bottom: 24px;
+  right: 18px;
+  width: 360px;
+  max-width: min(360px, calc(100vw - 36px));
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+
+#alcb-cfg {
+  margin-top: 8px;
+  padding: 7px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  color: #dbeafe;
+  font: 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+#alcb-saved-title {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+#alcb-saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 260px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.alcb-saved-item {
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 7px 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.07);
+  color: #f8fafc;
+  font: 12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alcb-saved-item:hover,
+.alcb-saved-item.selected {
+  background: rgba(34,197,94,0.25);
+  border-color: rgba(34,197,94,0.6);
+}
+
+.alcb-saved-empty {
+  font-size: 12px;
+  color: #94a3b8;
+  padding: 6px 2px;
+}
+
+#alcb-saved-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+#alcb-saved-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  background: #334155;
+  color: #fff;
+}
+
+#alcb-saved-run {
+  background: #22c55e !important;
+  color: #07140b !important;
+  font-weight: 800;
+}
